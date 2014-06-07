@@ -1,3 +1,213 @@
+<!DOCTYPE html>
 
-<h1>Hello!</h1>
-<h3>You have reached a page that doesn't really do anything. Perhaps you were aiming for <a href=data-journalism-home>this</a>?
+<link rel="stylesheet" href="style.css" />
+
+<script type="text/javascript" src="jquery.js"></script>
+
+<html>
+<head>
+<title>Sarah Lewin Home</title>
+
+<img src="hyperbolic_banner.png" style="width:940px" alt="Banner Image"/>
+</head>
+
+<h1>Sarah Lewin: Science Writer</h1>
+
+<div id="wrapper">
+<p>
+I am a science writer and graduate student at New York University's Science, Health and Environmental Reporting program. My work has appeared in The Scientist, on WGBH's Inside NOVA, on Boston Children's Hospital's Vector science and innovation blog, in Johns Hopkins Medicine Magazine, and in the Baltimore Symphony Orchestra's Overture Magazine as well as on Scienceline.org, where I am the current multimedia editor.  I've reported and written blogs, promoted organizations with social media, copyedited, led an improv comedy group, and written press releases (and once I foolishly coded a database interface)! Super shiny resume <a href="resume.pdf">here</a>, and my twitter feed is <a href="http://www.twitter.com/sarahexplains" target="_blank">here</a>.
+</p>
+<p>
+If you're looking for my blog, that's back on <a href="http://www.sarahexplains.wordpress.com" target="_blank">Wordpress</a>. Check out my (admittedly not recently updated) posts explaining everything from the <a title="Introductions; The Tetris Effect" href="http://www.sarahexplains.wordpress.com/2012/08/25/tetris-effect/" target="_blank">Tetris Effect</a> to <a title="How Not to Sit in a Chair" href="http://www.sarahexplains.wordpress.com/2012/09/09/how-not-to-sit-in-a-chair/" target="_blank">How Not to Sit in a Chair</a>.
+</p>
+
+</div>
+
+<div class="divider"></div>
+
+<div id="wrapper" style="background:none; padding-top:0; padding-bottom:20px;">
+
+<div class="button selected" id="all"> All </div>
+
+<div class="button" id="InsideNOVA"> Inside NOVA </div>
+
+<div class="button" id="scienceline"> Scienceline </div>
+
+<div class="button" id="vector"> Vector </div>
+
+<div class="button" id="other"> Other </div>
+
+</div>
+
+<div id="wrapper" style="width:940px;padding:0;">
+
+<div class="clip" id="clouds" tags=["all","scienceline"] site="http://scienceline.org/2014/04/written-in-the-clouds/">
+	<h3 style="text-align:center;margin-top:0px">SCIENCELINE<h3>
+	<img src="workpics/clouds.png" width="275px">
+	<h3>Written in the clouds</h3>
+	Cargo ships and weather balloons - no one said MAGIC was easy.
+</div>
+
+<div class="clip" id="tuning" tags=["all","other"] site="http://www.the-scientist.com/?articles.view/articleNo/39727/title/A-Face-to-Remember/">
+	<h3 style="text-align:center;margin-top:0px">THE SCIENTIST<h3>
+	<img src="workpics/tuning.png" width="275px">
+	<h3>A face to remember</h3>
+	MIT group's 'feature tuning' algorithm can make your profile more (or less) memorable.
+</div>
+
+<div class="clip" id="fly" tags=["all","scienceline"] site="http://scienceline.org/2014/02/video-close-up-on-flys-eye-photography/">
+	<h3 style="text-align:center;margin-top:0px">SCIENCELINE (video)<h3>
+	<img src="workpics/fly.png" width="275px">
+	<h3>Close up on Fly's Eye</h3>
+	Artist M. Henry Jones turns lenses and lighting into 3D portraits that really pop. With Joshua A. Krisch
+</div>
+
+<div class="clip" id="guide" tags=["all","scienceline"] site="http://scienceline.org/2014/02/infographic-a-planet-hunters-guide-to-the-galaxy/">
+	<h3 style="text-align:center;margin-top:0px">SCIENCELINE (infographic)<h3>
+	<img src="workpics/guide.jpg" width="275px">
+	<h3>Planet-hunter's guide to the galaxy</h3>
+	Do you know a star that's acting strangely? It might have...an exoplanet! It's more common than you think.
+</div>
+
+<div class="clip" id="photo" tags=["all","scienceline"] site="http://scienceline.org/2014/02/science-and-art-collide-in-space-images/">
+	<h3 style="text-align:center;margin-top:0px">SCIENCELINE<h3>
+	<img src="workpics/photo.jpg" width="275px">
+	<h3>Science and art collide in space images</h3>
+	What are we really seeing when we look at photos of planets and stars?
+</div>
+
+<div class="clip" id="mangrove" tags=["all","scienceline"] site="http://scienceline.org/2014/01/floridas-extraordinary-mangroves/">
+	<h3 style="text-align:center;margin-top:0px">SCIENCELINE<h3>
+	<img src="workpics/mangrove.jpg" width="275px">
+	<h3>Florida's extraordinary mangroves</h3>
+	'Walking trees' guard the shores of Florida and thrive in the salty water.
+</div>
+
+<div class="clip" id="oops" tags=["all","scienceline"] site="http://scienceline.org/2013/12/expecting-the-unexpected-in-space/">
+	<h3 style="text-align:center;margin-top:0px">SCIENCELINE<h3>
+	<img src="workpics/oops.png" width="275px">
+	<h3>Expecting the unexpected in space</h3>
+	NASA has a long history of repurposing old missions that finish or go awry and ending up with great science.
+</div>
+
+<div class="clip" id="sunspot" tags=["all","scienceline"] site="http://scienceline.org/2013/12/our-sleeping-sun/">
+	<h3 style="text-align:center;margin-top:0px">SCIENCELINE<h3>
+	<img src="workpics/sunspot.jpg" width="275px">
+	<h3>Our sleeping sun</h3>
+	Scientists wonder what's in store as sun activity lingers at lowest in over a century.
+</div>
+
+<div class="clip" id="ison" tags=["all","scienceline"] site="http://scienceline.org/2013/11/will-comet-ison-survive/">
+	<h3 style="text-align:center;margin-top:0px">SCIENCELINE<h3>
+	<img src="workpics/ison.jpg" width="275px">
+	<h3>Will Comet ISON survive?</h3>
+	<p>Tiny ice ball meets giant fireball.</p>
+</div>
+
+<div class="clip" id="touch" tags=["all","scienceline"] site="http://scienceline.org/2013/10/a-light-touch/">
+	<h3 style="text-align:center;margin-top:0px">SCIENCELINE<h3>
+	<img src="workpics/touch.jpg" width="275px">
+	<h3>A light touch</h3>
+	New twist on microscopic technique lets users feel the forces pressing in on particles.
+</div>
+
+<div class="clip" id="lazy" tags=["all","vector"] site="http://vectorblog.org/2013/09/from-discovery-to-trial-a-drug-that-may-correct-lazy-eye/">
+	<h3 style="text-align:center;margin-top:0px">VECTOR (Boston Children's Hospital)<h3>
+	<img src="workpics/lazy.jpg" width="275px">
+	<h3>From discovery to trial</h3>
+	<p>A drug that may correct 'lazy eye.'</p>
+</div>
+
+<div class="clip" id="plasma" tags=["all","vector"] site="http://vectorblog.org/2013/08/strenghthening-newborns-immune-systems-a-secret-in-the-plasma/">
+	<h3 style="text-align:center;margin-top:0px">VECTOR (Boston Children's Hospital)<h3>
+	<img src="workpics/plasma.jpg" width="275px">
+	<h3>A secret in the plasma</h3>
+	<p>Strengthening newborns' immune systems.</p>
+</div>
+
+<div class="clip" id="stem" tags=["all","vector"] site="http://vectorblog.org/2013/08/finding-the-best-stem-cell-for-the-job/">
+	<h3 style="text-align:center;margin-top:0px">VECTOR (Boston Children's Hospital)<h3>
+	<img src="workpics/stem.jpg" width="275px">
+	<h3>Finding the best stem cell for the job</h3>
+	Although stem cells have the potential to differentiate into any type, they often prefer a particular route.
+</div>
+
+<div class="clip" id="kidney" tags=["all","vector"] site="http://vectorblog.org/2013/08/decoding-kidney-disease-one-gene-at-a-time/">
+	<h3 style="text-align:center;margin-top:0px">VECTOR (Boston Children's Hospital)<h3>
+	<img src="workpics/kidney.jpg" width="275px">
+	<h3>Decoding kidney disease</h3>
+	Over one third of chronic kidney diseases are caused by single mutations on single genes.
+</div>
+
+<div class="clip" id="heavy" tags=["all","vector"] site="http://vectorblog.org/2013/07/a-mutation-and-a-mystery-weight-gain-without-a-change-in-energy-use/">
+	<h3 style="text-align:center;margin-top:0px">VECTOR (Boston Children's Hospital)<h3>
+	<img src="workpics/heavy.jpg" width="275px">
+	<h3>A mutation and a mystery</h3>
+	<p>In mice, weight gain without a change in energy use.</p>
+</div>
+
+<div class="clip" id="code" tags=["all","InsideNOVA"] site="http://www.pbs.org/wgbh/nova/insidenova/2012/10/cryptography-encryptions-past.html">
+	<h3 style="text-align:center;margin-top:0px">Inside NOVA<h3>
+	<img src="workpics/code.jpg" width="275px">
+	<h3>Encryptions Past, Present, and Future</h3>
+	Five-part series on the history and future of cryptography. (Blog for WGBH's NOVA TV program)
+</div>
+
+<div class="clip" id="swarm" tags=["all","InsideNOVA"] site="hhttp://www.pbs.org/wgbh/nova/insidenova/2012/09/swarm-robotics.html">
+	<h3 style="text-align:center;margin-top:0px">Inside NOVA<h3>
+	<img src="workpics/swarm.jpg" width="275px">
+	<h3>Adventures in swarm robotics</h3>
+	Harvard's thousand-robot army is almost complete. (Blog for WGBH's NOVA TV program)
+</div>
+
+<div class="clip" id="love" tags=["all","other"] site="http://www.browndailyherald.com/2012/04/26/brain-patterns-of-passion-revealed/">
+	<h3 style="text-align:center;margin-top:0px">BROWN DAILY HERALD<h3>
+	<img src="workpics/love.jpg" width="275px">
+	<h3>Brain patterns of passion revealed</h3>
+	<p>Love may be in the air, but it is also in your brainwaves.</p>
+</div>
+
+<div class="clip" id="baby" tags=["all","other"] site="http://www.hopkinsmedicine.org/news/publications/hopkins_medicine_magazine/hopkins_medicine_magazine_fall_2011/baby_dino_yields_big_clues">
+	<h3 style="text-align:center;margin-top:0px">JOHNS HOPKINS MEDICINE MAGAZINE<h3>
+	<img src="workpics/baby.jpg" width="275px">
+	<h3>Baby dino yields big clues</h3>
+	Scientists look to antiquity for insight into modern human anatomy.
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
+
+<script type="text/javascript">
+
+var currentselection = "all";
+
+$(document).ready(function(){
+  $("div").click(function(){
+  if($(this).hasClass("clip")){window.open($(this).attr("site"));}
+  if($(this).hasClass("button")){
+  currentselection = $(this).attr("id");
+  $('div[class*="clip"]').addClass("hidden");
+  $('div[tags*="'+currentselection+'"]').removeClass("hidden");
+  $('div[class*="button"]').removeClass("selected");
+  $(this).addClass("selected");
+	}
+  });
+});  
+
+$(document).ready(function(){
+  $("div").mouseover(function(){
+  if($(this).hasClass("clip")){$(this).addClass("selected");}
+  });
+});
+
+$(document).ready(function(){
+  $("div").mouseout(function(){
+  if($(this).hasClass("clip")){$(this).removeClass("selected");}
+  });
+});
+</script>
