@@ -33,7 +33,7 @@ width: 900px;
 margin: 0 auto;
 padding: 5px 20px;
 background-color: #ffffff;
-bottom: 0;
+border-radius: 2px;
 }
 
 #wrapper::before,
