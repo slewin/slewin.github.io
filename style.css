@@ -1,16 +1,16 @@
 body {
   width:940px;
   margin:20px auto;
-  font-family: Georgia, Times New Roman, serif;
+font-family: 'Open Sans', sans-serif;
   font-size: 15px;
   line-height: 1.5em;
   text-align: justify;
 }
 
 h1 {
-font-family:Helvetica, Arial, sans-serif;
+font-family: 'Montserrat', sans-serif;
 font-size: 45px;
-font-weight:bold;
+font-weight: Bold;
 text-shadow: 1px 1px 1px #000;
 color: #fff;
 line-height: 1.5em;
