@@ -97,6 +97,10 @@ margin-right: 10px;
 .dlength{
 	height: 566px;
 	}
+	
+.dwidth{
+	width: 566px;
+	}
 
 .selected {
 	background-color: #D9C4ED;
