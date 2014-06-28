@@ -74,7 +74,7 @@ If you're looking for my blog, that's back on <a href="http://www.sarahexplains.
 
 <div id="container" class="js-masonry">
 <!-- To add new clip, copy this: 
-<div class="clip" id="x" tags=["all"] site="http://www.google.com">
+<div class="item clip" id="x" tags=["all"] site="http://www.google.com">
 	<h3 style="text-align:center;margin-top:0px">Publication site</h3>
 	<img src="workpics/x.png" width="275px"> (size is 303x210)
 	<h3>Article Title</h3>
@@ -135,7 +135,13 @@ If you're looking for my blog, that's back on <a href="http://www.sarahexplains.
 	<h3>Florida's extraordinary mangroves</h3>
 	'Walking trees' guard the shores of Florida and thrive in the salty water.
 </div>
-
+<!--
+<div class="item clip dwidth" id="drought" tags=["all","other","multimedia"] site="data/drought.html">
+	<h3 style="text-align:center;margin-top:0px">Data Project</h3>
+	<img src="workpics/drought.png" width="585px">
+	<h3 align="center">California Drought Graph</h3>
+</div>
+-->
 <div class="item clip" id="oops" tags=["all","Scienceline"] site="http://Scienceline.org/2013/12/expecting-the-unexpected-in-space/">
 	<h3 style="text-align:center;margin-top:0px">Scienceline</h3>
 	<img src="workpics/oops.png" width="275px">
@@ -163,7 +169,13 @@ If you're looking for my blog, that's back on <a href="http://www.sarahexplains.
 	<h3>A light touch</h3>
 	New twist on microscopic technique lets users feel the forces pressing in on particles.
 </div>
-
+<!--
+<div class="item clip" id="drugs" tags=["all","other","multimedia"] site="data/drugshortages.html">
+	<h3 style="text-align:center;margin-top:0px">Data Project</h3>
+	<img src="workpics/drugs.png" width="275px">
+	<h3 align="center">Drug Shortage Database Visualization</h3>
+</div>
+-->
 <div class="item clip" id="lazy" tags=["all","Vector"] site="http://Vectorblog.org/2013/09/from-discovery-to-trial-a-drug-that-may-correct-lazy-eye/">
 	<h3 style="text-align:center;margin-top:0px">Vector (Boston Children's Hospital)</h3>
 	<img src="workpics/lazy.jpg" width="275px">
@@ -278,7 +290,7 @@ $(document).ready(function(){
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-51692290-1', 'slewin.github.io');
+  ga('create', 'UA-51692290-1', 'auto');
   ga('send', 'pageview');
 
 </script>
