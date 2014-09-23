@@ -84,11 +84,11 @@ If you're looking for my blog, that's back on <a href="http://www.sarahexplains.
 <div class="item clip" id="lights" tags=["all","Spectrum"] site=http://spectrum.ieee.org/transportation/advanced-cars/leds-bring-new-light-to-car-to-car-communication>
 	<h3 style="text-align:center;margin-top:0px">IEEE Spectrum</h3>
 	<img src="workpics/lights.png" width="275px" alt="lights article Sarah Lewin">
-	<h3>LEDs Bring New Light to Car-to-Car Communication</h3>
+	<h3>LEDs Bring New Light to Car-to-Car Comm</h3>
 	Signals transmitted by LEDs will help vehicles cooperate and avoid crashes
 </div>
 
-<div class="item clip" id="candy" tags=["featured","all","Spectrum"] site=http://spectrum.ieee.org/tech-talk/consumer-electronics/audiovideo/your-candy-wrappers-are-listening>
+<div class="item clip" id="candy" tags=["all","Spectrum"] site=http://spectrum.ieee.org/tech-talk/consumer-electronics/audiovideo/your-candy-wrappers-are-listening>
 	<h3 style="text-align:center;margin-top:0px">IEEE Spectrum</h3>
 	<img src="workpics/candy.jpg" width="275px" alt="candy article Sarah Lewin">
 	<h3>Your Candy Wrappers are Listening</h3>
@@ -299,6 +299,9 @@ If you're looking for my blog, that's back on <a href="http://www.sarahexplains.
 var currentselection = "featured";
 
 $(document).ready(function(){
+  $('div[class*="clip"]').addClass("hidden");
+  $('div[tags*="'+currentselection+'"]').removeClass("hidden");
+
   $("div").click(function(){
   if($(this).hasClass("clip")){window.open($(this).attr("site"));}
   if($(this).hasClass("button")){
