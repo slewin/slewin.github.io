@@ -5,9 +5,18 @@
 	<meta charset="UTF-8">
 	<title>What does my positive test result mean?</title>
     <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Sintony:400,400italic,700,700italic" rel="stylesheet" type="text/css">
 	<style>
+
+
 	body{
-	font-family:'Helvetica','sans-serif';
+	font-family: Sans-Serif;
+	}
+	
+	button{
+	display: block;
+	margin: 0 auto;
+	text-align: center;
 	}
 	
 	.column-left{
@@ -32,9 +41,9 @@
 	}
 	
 	#wrapper{
-	width:900px;
+	width:905px;
 	margin:auto;
-	padding:5px;
+	padding:10px;
 	border:1px solid gray;
 	text-align:center;
 	overflow:hidden;
@@ -77,9 +86,9 @@
 <body>
 
 <script type="text/javascript">
-	var total_cases = 1000, disease_likelihood = 0.015, false_negative = .133, true_positive = 1-false_negative, false_positive = .095, disease_given_pos = true_positive*disease_likelihood/(true_positive*disease_likelihood+(1-disease_likelihood)*false_negative);
+	var total_cases = 1000, disease_likelihood = 0.015, false_negative = .133, true_positive = 1-false_negative, false_positive = .095, disease_given_pos = true_positive*disease_likelihood/(true_positive*disease_likelihood+(1-disease_likelihood)*false_positive);
 </script>
-<div id="topwrapper">
+<div id="topwrapper" style="font-family:Sintony">
 <h1>What does my positive test result mean?</h1>
 <h3>To answer, you don't just need to know details on the test.<br>You need to know yourself well, too.</h3>
 </div>
@@ -102,7 +111,7 @@ All the dark gray that's appeared is the number of people with that risk who wil
 
 <div class="column-center" align="center" style="display:inline-block;
 	width:30%; margin-top:-25px;">
-	<div class="chart" id="chart1" data-waffly-title="" style="margin-bottom:-25px">
+	<div class="chart" id="chart1" data-waffly-title="" style="margin-bottom:-25px;">
 		<meter class="chart" value=.24 max="1"></meter>
 	</div>
 <div id="disease_given_pos" style="margin-bottom:10px"></div>	
@@ -124,8 +133,20 @@ False negative rate: <input type="number" id="false_negative" style="width:50px"
 </div>
 
 <div class="column-right">
+<p>"This is a good test if you test negative, but it's a horrible positive prediction value," says Dr. Scott Zeger, a professor of biostatistics at Johns Hopkins University. "If you test positive, you probably don't have the disease."</p>
+<p>But as the years go by and your risk increases, or if you find out that you have a strong risk factor, the probability of a true positive result increases.</p>
 <button onClick="window['disease_likelihood'] = .039; window['false_positive'] = .095; window['false_negative'] = .133; makegraph();">Mammogram test results age 60</button>
-<p>"This is a good test if you test negative, but it's a horrible positive prediction value," says Dr. Scott Zeger, [tktk] at Johns Hopkins University. "If you test positive, you probably don't have the disease."; another mammogram example (when older, so true positive outweighs false positive; quote from Dr2, examples (other tests maybe). Sources/credits at the bottom.</p></div>
+<p>The more sensitive a test is, so the lower the false positive rate, the fewer false alarms you'll get - but the factor that has the greatest effect is your own risk.</p> 
+<p>Ultimately, with mammograms, a positive results in a follow-up test to try and find evidence of a cancer.</p>
+<p>According to Dr. Julie Kaplan, a geneticist at University of Maryland, doctors generally only advise screening tests when there's some kind of follow-up action. "Usually, the conditions we screen for have treatments," she says. "There is the ability to treat or manage it."</p>
+<p>Example of super rare</p>
+<p>example of super common</p>
+<p>You can change the values at the bottom of the visualization to try out different scenarios or test your own risk and results for a test - see below for more information.</p>
+
+	</div>
+<div style="float:left;text-align:justify;line-height: 1.25em;">
+<p>* This data came from the U.S. Preventive Services Task Force <a href="http://www.uspreventiveservicestaskforce.org/uspstf/uspsbrca.htm">recommendations</a> on breast cancer screening as well as the National Cancer Institute's <a href="http://seer.cancer.gov/archive/csr/1975_2009_pops09/results_single/sect_04_table.18.pdf">Breast Cancer Surveillance Consortium</a>.</p>
+<a>To calculate the false positive and false negative rates at the bottom of the visualization, I used the <b>sensitivity</b> and <b>specificity</b> of a mammogram, found <a href="http://breastscreening.cancer.gov/statistics/benchmarks/screening/2009/table7.html">here</a>. Sensitivity and specificity are two values commonly used to quantify how effective medical tests are - to plug in your own tests look up the sensitivity and specificity values online and then enter 1-sensitivity for false negative and 1-specificity for false positive. Good luck!</div>
 </div>
 
 	<script src="jquery.min.js"></script>
@@ -134,13 +155,6 @@ False negative rate: <input type="number" id="false_negative" style="width:50px"
 	<script>
 	$(document).ready(function() {	
 	makegraph();
-
-		$('.my_chart').waffly({
-			graph_reverse:false,
-			graph_animate:true,
-			style_override:false,
-			total_dots: 62,
-		});
 	});
 	
 	function makegraph(){
@@ -148,8 +162,8 @@ False negative rate: <input type="number" id="false_negative" style="width:50px"
 		document.getElementById('false_positive').value = false_positive;
 		var a = document.getElementById('false_negative').value = false_negative;	
 		true_positive = 1-a;
-		disease_given_pos = true_positive*disease_likelihood/(true_positive*disease_likelihood+(1-disease_likelihood)*false_negative);
-		document.getElementById("disease_given_pos").innerHTML = "With a positive result, there's a " + Math.floor(disease_given_pos*100) + "% chance you have the disease.";
+		disease_given_pos = true_positive*disease_likelihood/(true_positive*disease_likelihood+(1-disease_likelihood)*false_positive);
+		document.getElementById("disease_given_pos").innerHTML = "With a positive result, there's a " + Math.floor(disease_given_pos*100) + "% chance you have the condition.";
 /*		
 		var d = document.getElementById("chart1");
 		d.setAttribute("data-waffly-title",disease_given_pos);	
@@ -161,6 +175,7 @@ False negative rate: <input type="number" id="false_negative" style="width:50px"
 			dot_row: 20,
 			dot_gap: 1,
 			dot_radius:'3px',
+			graph_font:'Sintony',
 			graph_color:'#f90',
 			graph_title_color:'#555',
 			graph_value_color:'#f90',
