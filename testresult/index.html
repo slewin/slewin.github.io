@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<link rel="stylesheet" />
+<head>
+	<meta charset="UTF-8">
+	<title>What does my positive test result mean?</title>
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+	<style>
+	body{
+	font-family:'Helvetica','sans-serif';
+	}
+	
+	.column-left{
+	float:left;
+	width:35%;
+	text-align:justify;
+	line-height: 1.25em;
+	}
+	
+	.column-right{
+	float:right;
+	width:35%;
+	text-align:justify;
+	line-height: 1.25em;
+	}
+	
+	#topwrapper{
+	width:900px;
+	margin:auto;
+	padding:5px;
+	text-align:center;
+	}
+	
+	#wrapper{
+	width:900px;
+	margin:auto;
+	padding:5px;
+	border:1px solid gray;
+	text-align:center;
+	overflow:hidden;
+	}
+	
+<!--	.my_chart{
+		border:1px solid #ccc;
+		font:1em 'comic sans ms', serif;
+		width:400px;
+		}
+	.my_chart .waffly{
+		padding:2em;
+		}
+	.my_chart .waffly_dots{
+		list-style:none;
+		margin:0;
+		padding:0;
+		}
+	.my_chart .waffly_dot{
+		display:inline-block;
+		background:url(imgs/casas.png) right top no-repeat;
+		height:16px;
+		margin-right:6px;
+		width:16px;
+		}
+	.my_chart .waffly_dot.color1{background-position:left top;}
+	.my_chart .waffly_value{
+		color:#F46508;
+		font-size:2em;
+		margin-bottom:.5em;
+		text-align:center;
+		}
+	.my_chart .waffly_title{
+		margin-top:1em;
+		text-align:center;
+		}-->
+
+	</style>
+</head>
+<body>
+
+<script type="text/javascript">
+	var total_cases = 1000, disease_likelihood = 0.015, false_negative = .133, true_positive = 1-false_negative, false_positive = .095, disease_given_pos = true_positive*disease_likelihood/(true_positive*disease_likelihood+(1-disease_likelihood)*false_negative);
+</script>
+<div id="topwrapper">
+<h1>What does my positive test result mean?</h1>
+<h3>To answer, you don't just need to know details on the test.<br>You need to know yourself well, too.</h3>
+</div>
+<div id="wrapper">
+<div style="text-align:justify;line-height: 1.25em;">
+<p>If you go in for a medical test, you're hoping for more clarity: you might have symptoms and want to know the disease behind them, or be checking for something that runs in your family. But when it comes to regular screening tests, you may have no idea how likely you are to have the disease - and often it's fairly unlikely. But it's still good to check, right?</p></div>
+
+<div class="column-left">
+<p>Let's say you're having a mammogram. A good estimate of breast cancer risk is age (although you can check your risk <a href="http://www.cancer.gov/bcrisktool/Default.aspx"target="_blank">here</a> and plug it into the visualization). Around 15 in 1000 women get breast cancer between ages 40 and 49.*</p> 
+<p>Click below to see that in the graphic - the blue squares are the women out of 1000 who get breast cancer in that age range.</p>
+<button onClick="window['disease_likelihood'] = .015; window['false_positive'] = 0; window['false_negative'] = 0; makegraph();">People with disease</button>
+<p>There's always a chance that a screening test will miss evidence of having the disease - this is the false negative rate. Ideally, it's a low number. In this case, a mammogram will read negative for approximately 13% of people with breast cancer - although this number changes slightly based on age. Click below to see that in light blue.</p>
+<button onClick="window['disease_likelihood'] = .015; window['false_positive'] = 0; window['false_negative'] = .133; makegraph();">Adding false negatives</button>
+<p>But the real worry, especially for breast cancer, is the chance of getting a positive result when you don't have the disease. For a mammogram, it's approximately 9.5% - so you'd think you could be pretty sure a positive result means you really have the disease. But let's look:</p>
+<button onClick="window['disease_likelihood'] = .015; window['false_positive'] = .095; window['false_negative'] = .133; makegraph();">Mammogram test results</button>
+<p>
+All the dark gray that's appeared is the number of people with that risk who will get a positive result even though they don't have the disease - it far outstrips the true positive results. Even though it's much more likely to get a positive when you do have the disease than when you don't, there are so many more people without the disease that the lower rate of false positives adds up.
+</p>
+</div>
+
+<div class="column-center" align="center" style="display:inline-block;
+	width:30%; margin-top:-25px;">
+	<div class="chart" id="chart1" data-waffly-title="" style="margin-bottom:-25px">
+		<meter class="chart" value=.24 max="1"></meter>
+	</div>
+<div id="disease_given_pos" style="margin-bottom:10px"></div>	
+<div style="text-align:left; font-size:11px; margin-left:10px; margin-bottom:10px;">
+<li class="waffly_dot color1" title="False negatives (have disease)" style="background:#a1aCFF;border-radius:3px;display:inline-block;height:9px;margin:0 1px 0 0;width:9px;"></li>False negatives (have disease, test says no)
+<br>
+<li class="waffly_dot color2" title="True positives (have disease)" style="background:#0033cc;border-radius:3px;display:inline-block;height:9px;margin:0 1px 0 0;width:9px;"></li>True positives (have disease, test says yes)
+<br>
+<li class="waffly_dot color3" title="False positives (don't have disease)" style="background:#a0a0a0;border-radius:3px;display:inline-block;height:9px;margin:0 1px 0 0;width:9px;"></li>False positives (don't have disease, test says yes)
+<br>
+<li class="waffly_dot color4" title="True negatives (don't have disease)" style="background:#d0d0d0;border-radius:3px;display:inline-block;height:9px;margin:0 1px 0 0;width:9px;"></li>True negatives (don't have disease, test says no)
+</div>
+
+<div align="right">
+Risk of having disease: <input type="number" id="disease_likelihood" style="width:50px;" min="0" max="1" step=".01"  onChange=" window['disease_likelihood'] = Number(value); makegraph();"><br>	
+False positive rate: <input type="number" id="false_positive" style="width:50px" min="0" max="1" step=".01"  onChange=" window['false_positive'] = Number(value); makegraph();"><br>
+False negative rate: <input type="number" id="false_negative" style="width:50px" min="0" max="1" step=".01"  onChange=" window['false_negative'] = Number(value); makegraph();">
+</div>
+</div>
+
+<div class="column-right">
+<button onClick="window['disease_likelihood'] = .039; window['false_positive'] = .095; window['false_negative'] = .133; makegraph();">Mammogram test results age 60</button>
+<p>"This is a good test if you test negative, but it's a horrible positive prediction value," says Dr. Scott Zeger, [tktk] at Johns Hopkins University. "If you test positive, you probably don't have the disease."; another mammogram example (when older, so true positive outweighs false positive; quote from Dr2, examples (other tests maybe). Sources/credits at the bottom.</p></div>
+</div>
+
+	<script src="jquery.min.js"></script>
+	<script src="jquery.waffly.js"></script>
+
+	<script>
+	$(document).ready(function() {	
+	makegraph();
+
+		$('.my_chart').waffly({
+			graph_reverse:false,
+			graph_animate:true,
+			style_override:false,
+			total_dots: 62,
+		});
+	});
+	
+	function makegraph(){
+		document.getElementById('disease_likelihood').value = disease_likelihood;
+		document.getElementById('false_positive').value = false_positive;
+		var a = document.getElementById('false_negative').value = false_negative;	
+		true_positive = 1-a;
+		disease_given_pos = true_positive*disease_likelihood/(true_positive*disease_likelihood+(1-disease_likelihood)*false_negative);
+		document.getElementById("disease_given_pos").innerHTML = "With a positive result, there's a " + Math.floor(disease_given_pos*100) + "% chance you have the disease.";
+/*		
+		var d = document.getElementById("chart1");
+		d.setAttribute("data-waffly-title",disease_given_pos);	
+*/	
+		
+		$('.chart').waffly({
+			total_dots: total_cases,
+			graph_width: 260,
+			dot_row: 20,
+			dot_gap: 1,
+			dot_radius:'3px',
+			graph_color:'#f90',
+			graph_title_color:'#555',
+			graph_value_color:'#f90',
+			graph_reverse:false,
+			graph_animate:false,
+			false_neg: false_negative*disease_likelihood*total_cases,
+			true_pos: true_positive*disease_likelihood*total_cases,
+			false_pos: false_positive*(1-disease_likelihood)*total_cases,
+		});
+		};
+	</script>
+
+</body>
+</html>
