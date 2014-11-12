@@ -94,18 +94,18 @@
 </div>
 <div id="wrapper">
 <div style="text-align:justify;line-height: 1.25em;">
-<p>If you go in for a medical test, you're hoping for more clarity: you might have symptoms and want to know the disease behind them, or be checking for something that runs in your family. But when it comes to regular screening tests, you may have no idea how likely you are to have the disease - and often it's fairly unlikely. But it's still good to check, right?</p></div>
+<p>If you go in for a medical test, you're hoping for more clarity: you might have symptoms and want to know the disease behind them or be checking for something that runs in your family. But when it comes to regular screening tests, you may have no idea how likely you are to have the disease - and often it's fairly unlikely. But it's still good to check, right?</p></div>
 
 <div class="column-left">
 <p>Let's say you're having a mammogram. A good estimate of breast cancer risk is age (although you can check your risk <a href="http://www.cancer.gov/bcrisktool/Default.aspx"target="_blank">here</a> and plug it into the visualization). Around 15 in 1000 women get breast cancer between ages 40 and 49.*</p> 
-<p>Click below to see that in the graphic - the blue squares are the women out of 1000 who get breast cancer in that age range.</p>
+<p>Click below to see that in the graphic—the blue squares are the women out of 1000 who get breast cancer in that age range.</p>
 <button onClick="window['disease_likelihood'] = .015; window['false_positive'] = 0; window['false_negative'] = 0; makegraph();">People with disease</button>
-<p>There's always a chance that a screening test will miss evidence of having the disease - this is the false negative rate. Ideally, it's a low number. In this case, a mammogram will read negative for approximately 13% of people with breast cancer - although this number changes slightly based on age. Click below to see that in light blue.</p>
+<p>There's always a chance that a screening test will miss evidence of having the disease—this is the false negative rate. Ideally, it's a low number. In this case, a mammogram will read negative for approximately 13% of people with breast cancer—although this number changes slightly based on age. Click below to see that in light blue.</p>
 <button onClick="window['disease_likelihood'] = .015; window['false_positive'] = 0; window['false_negative'] = .133; makegraph();">Adding false negatives</button>
-<p>But the real worry, especially for breast cancer, is the chance of getting a positive result when you don't have the disease. For a mammogram, it's approximately 9.5% - so you'd think you could be pretty sure a positive result means you really have the disease. But let's look:</p>
+<p>But the real worry, especially for breast cancer, is the chance of getting a positive result when you don't have the disease. For a mammogram, it's approximately 9.5%—so you'd think you could be pretty sure a positive result means you really have the disease. But let's look:</p>
 <button onClick="window['disease_likelihood'] = .015; window['false_positive'] = .095; window['false_negative'] = .133; makegraph();">Mammogram test results</button>
 <p>
-All the dark gray that's appeared is the number of people with that risk who will get a positive result even though they don't have the disease - it far outstrips the true positive results. Even though it's much more likely to get a positive when you do have the disease than when you don't, there are so many more people without the disease that the lower rate of false positives adds up.
+All the dark gray that's appeared is the number of people with that risk who will get a positive result even though they don't have the disease—it far outstrips the true positive results. Even though it's much more likely to get a positive when you do have the disease than when you don't, there are so many more people without the disease that the lower rate of false positives adds up.
 </p>
 </div>
 
@@ -136,17 +136,19 @@ False negative rate: <input type="number" id="false_negative" style="width:50px"
 <p>"This is a good test if you test negative, but it's a horrible positive prediction value," says Dr. Scott Zeger, a professor of biostatistics at Johns Hopkins University. "If you test positive, you probably don't have the disease."</p>
 <p>But as the years go by and your risk increases, or if you find out that you have a strong risk factor, the probability of a true positive result increases.</p>
 <button onClick="window['disease_likelihood'] = .039; window['false_positive'] = .095; window['false_negative'] = .133; makegraph();">Mammogram test results age 60</button>
-<p>The more sensitive a test is, so the lower the false positive rate, the fewer false alarms you'll get - but the factor that has the greatest effect is your own risk.</p> 
-<p>Ultimately, with mammograms, a positive results in a follow-up test to try and find evidence of a cancer.</p>
+<p>The more sensitive a test is, so the lower the false positive rate, the fewer false alarms you'll get—but the factor that has the greatest effect is your own risk.</p> 
+<p>Ultimately, with mammograms, a positive results in a follow-up test to try and find evidence of a cancer. Because of the high false-positive rate, and the chance of overdiagnosing what the test finds, the US Preventative Services Task Force does not recommend getting regular mammograms until age 50 unless you have some higher known risk.</p>
 <p>According to Dr. Julie Kaplan, a geneticist at University of Maryland, doctors generally only advise screening tests when there's some kind of follow-up action. "Usually, the conditions we screen for have treatments," she says. "There is the ability to treat or manage it."</p>
-<p>Example of super rare</p>
+<p>She used to administer screening tests to newborns, for instance; it's vital to catch certain genetic traits, like the inability to produce specific vitamins, and she would often start the vitamin supplement even before ... (worth pursuing this?)
+</p>
+<p>How to transition to... Example of super rare</p>
 <p>example of super common</p>
-<p>You can change the values at the bottom of the visualization to try out different scenarios or test your own risk and results for a test - see below for more information.</p>
+<p>You can change the values at the bottom of the visualization to try out different scenarios or test your own risk and results for a test—see below for more information.</p>
 
 	</div>
 <div style="float:left;text-align:justify;line-height: 1.25em;">
 <p>* This data came from the U.S. Preventive Services Task Force <a href="http://www.uspreventiveservicestaskforce.org/uspstf/uspsbrca.htm">recommendations</a> on breast cancer screening as well as the National Cancer Institute's <a href="http://seer.cancer.gov/archive/csr/1975_2009_pops09/results_single/sect_04_table.18.pdf">Breast Cancer Surveillance Consortium</a>.</p>
-<a>To calculate the false positive and false negative rates at the bottom of the visualization, I used the <b>sensitivity</b> and <b>specificity</b> of a mammogram, found <a href="http://breastscreening.cancer.gov/statistics/benchmarks/screening/2009/table7.html">here</a>. Sensitivity and specificity are two values commonly used to quantify how effective medical tests are - to plug in your own tests look up the sensitivity and specificity values online and then enter 1-sensitivity for false negative and 1-specificity for false positive. Good luck!</div>
+<a>To calculate the false positive and false negative rates at the bottom of the visualization, I used the <b>sensitivity</b> and <b>specificity</b> of a mammogram, found <a href="http://breastscreening.cancer.gov/statistics/benchmarks/screening/2009/table7.html">here</a>. Sensitivity and specificity are two values commonly used to quantify how effective medical tests are—to plug in your own tests look up the sensitivity and specificity values online and then enter 1 - sensitivity for false negative and 1 - specificity for false positive. Remember that the calculation can only be as accurate as the data you have—so be sure to get a good idea of your risk. Good luck!</div>
 </div>
 
 	<script src="jquery.min.js"></script>
