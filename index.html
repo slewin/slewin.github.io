@@ -31,9 +31,9 @@
 
 <div id="wrapper">
 <img src="headshot.jpg" style="width:150px; float:right; margin-top:20px; margin-right:5px; margin-left:10px" alt="Sarah Lewin headshot"/><p style="margin-bottom:-2px">
-<em>I am a science writer, web intern at Science Friday, and multimedia editor at Scienceline.org.</em></p>
-<p style="margin-bottom:-2px">My work has been featured in IEEE Spectrum, The Scientist, WGBH's Inside NOVA, Boston Children's Hospital's science and innovation blog, and Johns Hopkins Medicine Magazine.</p>
-<p style="margin-bottom:-2px">I've put together interactive data visualizations, promoted organizations with social media, fact-checked, copyedited, and led an improv comedy group. Super shiny resume <a href="resume.pdf">here</a>, and my twitter feed is <a href="http://www.twitter.com/sarahexplains" target="_blank">here</a>. Email me: saraholewin (at) gmail.</p>
+<em>I am a science writer and current web intern at Science Friday.</em></p>
+<p style="margin-bottom:-2px">My work has been featured by IEEE Spectrum, The Scientist, WGBH's Inside NOVA, Boston Children's Hospital's science and innovation blog, and Johns Hopkins Medicine Magazine.</p>
+<p style="margin-bottom:-2px">I've put together interactive data visualizations, promoted organizations with social media, fact-checked, copyedited, programmed in Python, and led an improv comedy group. Super shiny resume <a href="resume.pdf">here</a>, and my twitter feed is <a href="http://www.twitter.com/sarahexplains" target="_blank">here</a>. Email me: saraholewin (at) gmail.</p>
 <p>
 If you're looking for my blog, that's back on <a href="http://www.sarahexplains.wordpress.com" target="_blank">Wordpress</a>. Check out my (admittedly not recently updated) posts explaining everything from the <a title="Introductions; The Tetris Effect" href="http://www.sarahexplains.wordpress.com/2012/08/25/tetris-effect/" target="_blank">Tetris Effect</a> to <a title="How Not to Sit in a Chair" href="http://www.sarahexplains.wordpress.com/2012/09/09/how-not-to-sit-in-a-chair/" target="_blank">How Not to Sit in a Chair</a>.
 </p>
@@ -43,7 +43,7 @@ If you're looking for my blog, that's back on <a href="http://www.sarahexplains.
 
 
 
-<div id="wrapper" style="background:none; padding-top:0; padding-bottom:0px; box-shadow:none; border:none">
+<div id="wrapper" style="padding:0px; background:none; padding-top:0; padding-bottom:0px; box-shadow:none; border:none">
 
 <div class="button selected" id="featured">Featured</div>
 
@@ -69,10 +69,9 @@ If you're looking for my blog, that's back on <a href="http://www.sarahexplains.
 
 <div id="container" class="js-masonry">
 
-<div class="item" style="background-color: #F2EBF9; text-align: justify; margin: 10px; width: 275px; height: 265px; padding: 8px; line-height: 1.5em; float: left; box-shadow: 0px 0px 1px #33194D;">
-	<h3 style="padding-top:20px; text-align:center;">I sometimes do things!</h3>
-	<p>Here's a sortable selection of my writing clips - as you can see, along with programming in Python I can build webpages with HTML and JavaScript. The grid layout of different sized blocks is from the <a href="http://masonry.desandro.com/" target="_blank">Masonry</a> library, if you were wondering.</p>
-	<p>Thanks for visiting!</p>	
+<div class="item" style="background-color: #F2EBF9; text-align: justify; margin: 10px; width: 275px; height: 265px; padding: 8px; line-height: 1.5em; float: left; box-shadow: 0px 0px 1px #33194D; text-align:center;">
+	<h3 style="padding-top:80px;">I sometimes do things!</h3>
+	<p>(Sort writing clips with buttons above)</p>
 </div>
 
 <!-- To add new clip, copy this: 
@@ -83,6 +82,13 @@ If you're looking for my blog, that's back on <a href="http://www.sarahexplains.
 	<p>Description - delete p if two lines</p>	
 </div>
 -->
+<div class="item clip" id="phone" tags=["all","Spectrum","multimedia"] site="http://spectrum.ieee.org/static/interactive-apples-and-samsungs-changing-smartphone-recipes">
+	<h3 style="text-align:center;margin-top:0px">IEEE Spectrum (interactive)</h3>
+	<img src="workpics/phone.png" width="275px" alt="phone visualization Sarah Lewin"> 
+	<h3>Changing Smartphone Recipes</h3>
+	<p>Teardowns reveal manufacturers' priorities.</p>	
+</div>
+
 <div class="item clip" id="mummy" tags=["featured","all","SciFri"] site="http://www.sciencefriday.com/blogs/10/28/2014/picture-of-the-week-egyptian-mummy.html">
 	<h3 style="text-align:center;margin-top:0px">Science Friday</h3>
 	<img src="workpics/mummy.png" width="275px" alt="mummy article Sarah Lewin">
@@ -102,13 +108,6 @@ If you're looking for my blog, that's back on <a href="http://www.sarahexplains.
 	<img src="workpics/sun.png" width="275px" alt="sun article Sarah Lewin"> 
 	<h3>Picture of the Week: The Sun</h3>
 	Photographer Alan Friedman documents the sun’s many faces from his Buffalo, NY backyard.
-</div>
-
-<div class="item clip" id="maps" tags=["all","Scienceline","multimedia"] site="http://scienceline.org/2014/09/video-old-maps-new-directions/">
-	<h3 style="text-align:center;margin-top:0px">Scienceline (video)</h3>
-	<img src="workpics/maps.png" width="275px" alt="maps video Sarah Lewin">
-	<h3>Old maps, new directions</h3>
-	NYPL Labs is bringing the library's vast collections into the digital, shareable age. With Krystnell A. Storr
 </div>
 
 <div class="item clip" id="lights" tags=["all","Spectrum"] site=http://spectrum.ieee.org/transportation/advanced-cars/leds-bring-new-light-to-car-to-car-communication>
@@ -180,8 +179,16 @@ If you're looking for my blog, that's back on <a href="http://www.sarahexplains.
 	<h3>Planet-hunter's guide to the galaxy</h3>
 </div>
 
-<div class="blank item clip" id="blank" tags=["multimedia"] style="visibility:hidden">
+
+<div class="item clip" id="maps" tags=["all","Scienceline","multimedia"] site="http://scienceline.org/2014/09/video-old-maps-new-directions/">
+	<h3 style="text-align:center;margin-top:0px">Scienceline (video)</h3>
+	<img src="workpics/maps.png" width="275px" alt="maps video Sarah Lewin">
+	<h3>Old maps, new directions</h3>
+	NYPL Labs is bringing the library's vast collections into the digital, shareable age. With Krystnell A. Storr
 </div>
+
+<!--<div class="blank item clip" id="blank" tags=["multimedia"] style="visibility:hidden">
+</div>-->
 
 <div class="item clip" id="fly" tags=["all","Scienceline","multimedia"] site="http://Scienceline.org/2014/02/video-close-up-on-flys-eye-photography/">
 	<h3 style="text-align:center;margin-top:0px">Scienceline (video)</h3>
@@ -315,7 +322,7 @@ If you're looking for my blog, that's back on <a href="http://www.sarahexplains.
 </div>
 
 </div>
-<p style="font-size:13px;color:gray;margin-left:10px;margin-top:2px;">Hand-coded in HTML/CSS and JavaScript by Sarah Lewin. Hosted on GitHub.</p>
+<p style="font-size:13px;color:gray;margin-left:10px;margin-top:2px;">Hand-coded in HTML/CSS and JavaScript by Sarah Lewin. Hosted on GitHub. The layout of different sized blocks is from the <a href="http://masonry.desandro.com/" target="_blank">Masonry</a> library, by the way.</p>
 </body>
 
 </html>
