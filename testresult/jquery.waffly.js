@@ -12,7 +12,7 @@
 			false_pos: 99,
 			graph_font: 'arial, sans-serif',
 			graph_title_color: '#666',
-			graph_color1: '#a1aCFF',
+			graph_color1: '#b8d0e8',
 			graph_color2: '#0033cc',
 			graph_color3: '#a0a0a0',
 			graph_color4: '#d0d0d0',
