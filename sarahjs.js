@@ -2,6 +2,9 @@
 
 var currentselection = "featured";
 
+window.onload = fixheadersize;
+
+window.onresize = fixheadersize;
 
 $(document).ready(function(){
   $('div[class*="clip"]').addClass("hidden");
@@ -32,6 +35,17 @@ $(document).ready(function(){
   if($(this).hasClass("clip")){$(this).removeClass("selected");}
   });
 });
+
+function fixheadersize(){
+
+var w = window.innerWidth;
+
+var biggerwidth = "100%";
+
+if(w < 940){biggerwidth="940px";};
+
+$('.header').css('width', biggerwidth);
+}
 
 
 /*This rotation business is included for no reason whatsoever, and is adapted to go counterclockwise (also known as widdershins) from http://www.developphp.com/video/JavaScript/Transform-Rotate-Image-Spin-Smooth-Animation-Tutorial*/
