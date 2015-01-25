@@ -9,9 +9,9 @@
 
 <script type="text/javascript" src="jquery.js"></script>
 
-<script type="text/javascript" src="masonry.pkgd.min.js">
+<script type="text/javascript" src="masonry.pkgd.min.js"></script>
 
-</script>
+<script type="text/javascript" src="sarahjs.js"></script>
 
 <html>
 <head>
@@ -22,14 +22,25 @@
 
 <body>
 
-<!--<div style="position:relative; background:url(fulltrace.png); width:940px; height:200px; background-repeat:no-repeat; background-size: 100%; background-position:0 -400px" alt="Banner Image"/> -->
+<!--<div style="position:relative; background:url(fulltrace.png); width:940px; height:200px; background-repeat:no-repeat; background-size: 100%; background-position:0 -400px" alt="Banner Image"/>-->
 
-<div style="position:relative; background:url(hypernarrow.png); width:940px; height:180px" alt="Sarah Lewin: Science Writer Banner Image"/>
+<!--<div style="position:relative; background:url(hypernarrow.png); width:940px; height:180px" alt="Sarah Lewin: Science Writer Banner Image"/>
 <h1 style="position:absolute; bottom:-22px; left:-15px">Sarah Lewin: Science Writer</h1>
+</div>-->
+<div class="header">
+<table width="940px" align="center">
+<tr>
+<td class="column-left"><h1>Sarah Lewin</h1></td>
+<td style="text:align:center;">
+<div class="hyperbolicspace"><img id="blob" src="blob.png" /></div>
+</td>
+<td class="column-right"><h1>Science Writer</h1>
+</td>
+</table>
 </div>
 <div class="divider"></div>
 
-<div id="wrapper">
+<div id="wrapper" style="margin-top:150px">
 <img src="headshot.jpg" style="width:150px; float:right; margin-top:20px; margin-right:5px; margin-left:10px" alt="Sarah Lewin headshot"/><p style="margin-bottom:-2px">
 <em>As a science writer based in NYC, I make sense of the world for fun and profit.</em></p>
 <p style="margin-bottom:-2px">My work has been featured by IEEE Spectrum, The Scientist, Science Friday, WGBH's Inside NOVA, Boston Children's Hospital's science and innovation blog, and Johns Hopkins Medicine Magazine.</p>
@@ -346,41 +357,6 @@ If you're looking for my blog, that's back on <a href="http://www.sarahexplains.
 
 </html>
 
-<script type="text/javascript">
-
-var currentselection = "featured";
-
-$(document).ready(function(){
-  $('div[class*="clip"]').addClass("hidden");
-  $('div[tags*="'+currentselection+'"]').removeClass("hidden");
-
-  $("div").click(function(){
-  if($(this).hasClass("clip")){window.open($(this).attr("site"));}
-  if($(this).hasClass("button")){
-  currentselection = $(this).attr("id");
-  $('div[class*="clip"]').addClass("hidden");
-  $('div[tags*="'+currentselection+'"]').removeClass("hidden");
-  $('div[class*="button"]').removeClass("selected");
-  $(this).addClass("selected");
-  $('#container').masonry();
-	}
-  });
-});  
-
-$(document).ready(function(){
-  $("div").mouseover(function(){
-  if($(this).hasClass("clip")){$(this).addClass("selected");}
-  });
-});
-
-$(document).ready(function(){
-  $("div").mouseout(function(){
-  if($(this).hasClass("clip")){$(this).removeClass("selected");}
-  });
-});
-
-</script>
-
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -389,5 +365,4 @@ $(document).ready(function(){
 
   ga('create', 'UA-51692290-1', 'auto');
   ga('send', 'pageview');
-
-</script>
+ </script>

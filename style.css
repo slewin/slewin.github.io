@@ -1,3 +1,5 @@
+/*CSS by Sarah Lewin*/
+
 body {
   width:940px;
   margin:20px auto;
@@ -5,7 +7,8 @@ font-family: 'Open Sans', sans-serif;
   font-size: 15px;
   line-height: 1.5em;
   text-align: justify;
-  background-color: #f9f9f9;
+  background-color: #dadada; /*f9f9f9*/
+  background:url(shattered.png);
 }
 
 
@@ -15,13 +18,10 @@ a:visited {color: #A776D5;}
 
 h1 {
 font-family: 'Montserrat', sans-serif;
-font-size: 45px;
-font-weight: Bold;
-text-shadow: 1px 1px 1px #000;
+font-size: 40px;
 color: #fff;
 line-height: 1.5em;
   margin-bottom:20px;
-  padding-left:20px;
 }
 
 h3 {
@@ -40,11 +40,11 @@ h3 {
 width: 900px;
 margin: 0 auto;
 padding: 5px 20px;
-background-color: #Fff;
+/*background-color: #Fff;*/
 box-shadow: 0 4px 96px 4px rgba(0,0,0,0.12);
-
 }
-{border-color: #33194D;
+{
+border-color: #33194D;
 border-radius: 2px;
 border-style: solid;
 border-width: 5px;}
@@ -60,7 +60,7 @@ border-width: 5px;}
 }
 
 .divider {
-  border-bottom:1px solid #d3d3d3;
+  border-bottom:1px solid #444; /*d3d3d3*/
   margin-bottom:15px;
   padding-bottom:15px;  
 }
@@ -112,4 +112,33 @@ margin-right: 10px;
 	
 .hidden {
 	display: none;
+	}
+	
+.header{
+position:absolute;
+left:0;
+top:0;
+width:100%;
+height:100px;
+background:#000;
+}
+
+.column-left{
+	float:left;
+	width:300px;
+	text-align:left;
+	margin-top:10px
+	}
+
+.column-right{
+	float:right;
+	width:300px;
+	text-align:right;
+	}
+	
+#blob{
+	width:150px;
+	display:block;
+	margin:auto;
+	margin-top:25px;
 	}
