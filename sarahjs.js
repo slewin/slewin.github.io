@@ -67,8 +67,8 @@ function rotateAnimation(el,speed){
 	}
 	looper = setTimeout('rotateAnimation(\''+el+'\','+speed+')',speed);
 	degrees--;
-	if(degrees < 1){
-		degrees = 360;
+	if(degrees < 0){
+		degrees = 359;
 		clearTimeout(looper);
 	}
 	}
