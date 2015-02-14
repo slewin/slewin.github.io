@@ -56,6 +56,8 @@ function rotateAnimation(el,speed){
 	var elem = document.getElementById(el);
 	if(navigator.userAgent.match("Chrome")){
 		elem.style.WebkitTransform = "rotate("+degrees+"deg)";
+	} else if(navigator.userAgent.match("Safari")){
+		elem.style.WebkitTransform = "rotate("+degrees+"deg)";
 	} else if(navigator.userAgent.match("Firefox")){
 		elem.style.MozTransform = "rotate("+degrees+"deg)";
 	} else if(navigator.userAgent.match("MSIE")){
