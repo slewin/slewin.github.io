@@ -409,7 +409,7 @@ If you're looking for my blog, that's back on <a href="http://www.sarahexplains.
 var trackOutboundLink = function(url) {
    ga('send', 'event', 'outbound', 'click', url, {'hitCallback':
      function () {
-     document.location = url;
+     <!--document.location = url;-->
      }
    });
 }
