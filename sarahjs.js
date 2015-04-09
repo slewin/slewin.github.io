@@ -11,7 +11,7 @@ $(document).ready(function(){
   $('div[tags*="'+currentselection+'"]').removeClass("hidden");
 
   $("div").click(function(){
-  if($(this).hasClass("clip")){window.open($(this).attr("site"));}
+  if($(this).hasClass("clip")){window.open($(this).attr("site"));trackOutboundLink($(this).attr("site"))}
   if($(this).hasClass("button")){
   currentselection = $(this).attr("id");
   $('div[class*="clip"]').addClass("hidden");
