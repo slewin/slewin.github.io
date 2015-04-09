@@ -11,7 +11,7 @@ $(document).ready(function(){
   $('div[tags*="'+currentselection+'"]').removeClass("hidden");
 
   $("div").click(function(){
-  if($(this).hasClass("clip")){window.open($(this).attr("site"));}
+  if($(this).hasClass("clip")){window.open($(this).attr("site"));trackOutboundLink("site");}
   if($(this).hasClass("button")){
   currentselection = $(this).attr("id");
   $('div[class*="clip"]').addClass("hidden");
@@ -74,3 +74,16 @@ function rotateAnimation(el,speed){
 		clearTimeout(looper);
 	}
 	}
+
+/**
+* Function that tracks a click on an outbound link in Google Analytics.
+* This function takes a valid URL string as an argument, and uses that URL string
+* as the event label.
+*/
+var trackOutboundLink = function(url) {
+   ga('send', 'event', 'outbound', 'click', url, {'hitCallback':
+     function () {
+     document.location = url;
+     }
+   });
+}
