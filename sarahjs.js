@@ -14,6 +14,7 @@ $(document).ready(function(){
   if($(this).hasClass("clip")){window.open($(this).attr("site"));trackOutboundLink($(this).attr("site"))}
   if($(this).hasClass("button")){
   currentselection = $(this).attr("id");
+  trackButton(currentselection);
   $('div[class*="clip"]').addClass("hidden");
   $('div[tags*="'+currentselection+'"]').removeClass("hidden");
   $('div[class*="button"]').removeClass("selected");
