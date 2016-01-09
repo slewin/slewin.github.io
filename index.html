@@ -433,7 +433,7 @@ If you're looking for my blog, that's back on <a href="http://www.sarahexplains.
   /**
 * Function that tracks a click on an outbound link in Google Analytics.
 * This function takes a valid URL string as an argument, and uses that URL string
-* as the event label.
+* as the event label. ****SL NOTE: I think the hitcallback thing may be edited out; it makes sure it reports before you leave the page***
 */
 var trackOutboundLink = function(url) {
    ga('send', 'event', 'outbound', 'click', url, {'hitCallback':
@@ -441,5 +441,9 @@ var trackOutboundLink = function(url) {
      <!--document.location = url;-->
      }
    });
-}
+};
+/* I added this! */
+var trackButton = function(buttontype) {
+	ga('send', 'event', 'button', buttontype)
+};
  </script>
