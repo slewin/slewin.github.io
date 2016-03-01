@@ -13,7 +13,7 @@ $(document).ready(function(){
   $('div[tags*="'+currentselection+'"]').removeClass("hidden");
 
   $("div").click(function(){
-  if($(this).hasClass("self-visit")){track = "off"}
+  if($(this).hasClass("self-visit")){track = "off";console.log("detected click!")}
   if($(this).hasClass("clip")){window.open($(this).attr("site"));if(track=="on"){trackOutboundLink($(this).attr("site"))}}
   if($(this).hasClass("button")){
   currentselection = $(this).attr("id");
