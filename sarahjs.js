@@ -13,7 +13,7 @@ $(document).ready(function(){
   $('div[tags*="'+currentselection+'"]').removeClass("hidden");
 
 $("span").click(function(){
-	if($(this).hasClass("self-visit")){track = "off";console.log("detected click!")});
+	if($(this).hasClass("self-visit")){track = "off"});
 
   $("div").click(function(){
   if($(this).hasClass("clip")){window.open($(this).attr("site"));if(track=="on"){trackOutboundLink($(this).attr("site"))}}
