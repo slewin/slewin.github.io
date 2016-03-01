@@ -2,6 +2,8 @@
 
 var currentselection = "featured";
 
+var track = "on";
+
 window.onload = fixheadersize;
 
 window.onresize = fixheadersize;
@@ -11,10 +13,11 @@ $(document).ready(function(){
   $('div[tags*="'+currentselection+'"]').removeClass("hidden");
 
   $("div").click(function(){
-  if($(this).hasClass("clip")){window.open($(this).attr("site"));trackOutboundLink($(this).attr("site"))}
+  if($(this).hasClass("self-visit")){track = "off"}
+  if($(this).hasClass("clip")){window.open($(this).attr("site"));if(track=="on"){trackOutboundLink($(this).attr("site"))}}
   if($(this).hasClass("button")){
   currentselection = $(this).attr("id");
-  trackButton(currentselection);
+  if(track=="on"){trackButton(currentselection)};
   $('div[class*="clip"]').addClass("hidden");
   $('div[tags*="'+currentselection+'"]').removeClass("hidden");
   $('div[class*="button"]').removeClass("selected");
