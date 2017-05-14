@@ -8,7 +8,7 @@ font-family: 'Open Sans', sans-serif;
   line-height: 1.5em;
   text-align: justify;
   background-color: #dadada; /*f9f9f9*/
-  background:url(shattered.png);
+  background:url(shattered.png); /* Background pattern from Subtle Patterns: www.toptal.com/designers/subtlepatterns */
 }
 
 
