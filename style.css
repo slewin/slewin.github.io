@@ -16,6 +16,12 @@ a:link  {color: #000;}
 
 a:visited {color: #A776D5;}
 
+a.clip:link  {color: #000;
+text-decoration: none}
+
+a.clip:visited {color: #000;
+text-decoration: none}
+
 h1 {
 font-family: 'Montserrat', sans-serif;
 font-size: 35px;
