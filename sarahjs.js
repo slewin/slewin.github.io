@@ -16,7 +16,7 @@ $("span").click(function(){
 	if($(this).hasClass("self-visit")){track = "off"}});
 
   $("div").click(function(){
-  if($(this).hasClass("clip")){/*window.open($(this).attr("site"));*/if(track=="on"){trackOutboundLink($(this).attr("site"))}}
+  if($(this).hasClass("clip")){/*window.open($(this).attr("site"));*/if(track=="on"){trackOutboundLink($(this).attr("id"))}}
   if($(this).hasClass("button")){
   currentselection = $(this).attr("id");
   if(track=="on"){trackButton(currentselection)};
