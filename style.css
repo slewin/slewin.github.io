@@ -34,6 +34,7 @@ font-size: 28px;
 color: #fff;
 line-height: 1.5em;
 margin-bottom:20px;
+white-space: nowrap;
 }
 
 h3 {
